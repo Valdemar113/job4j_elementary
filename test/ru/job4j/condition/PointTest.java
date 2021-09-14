@@ -32,12 +32,12 @@ public class PointTest {
         Assert.assertEquals(expected, out, 0.01);
     }
 
-   @Test
+    @Test
     public void when25to75then5() {
         double expected = 5;
-       Point a = new Point(2, 5);
-       Point b = new Point(7, 5);
-       double out = a.distance(b);
+        Point a = new Point(2, 5);
+        Point b = new Point(7, 5);
+        double out = a.distance(b);
         Assert.assertEquals(expected, out, 0.01);
     }
 
@@ -50,4 +50,23 @@ public class PointTest {
         Assert.assertEquals(expected, out, 0.01);
     }
 
+    @Test
+    public void when423to846then538() {
+        double expected = 5.38;
+        Point c = new Point(4, 2, 3);
+        Point d = new Point(8, 4, 6);
+        double out = c.distance3d(d);
+        Assert.assertEquals(expected, out, 0.01);
+
+    }
+
+    @Test
+    public void when579to975then565() {
+        double expected = 5.65;
+        Point c = new Point(5, 7, 9);
+        Point d = new Point(9, 7, 5);
+        double out = c.distance3d(d);
+        Assert.assertEquals(expected, out, 0.01);
+
+    }
 }
